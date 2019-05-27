@@ -1,0 +1,32 @@
+# Drupal with PostgreSQL
+#
+# Access via "http://localhost:8080"
+#   (or "http://$(docker-machine ip):8080" if using docker-machine)
+#
+# This is a close copy of an example at https://hub.docker.com/_/drupal 
+# Differences:
+#  - environment variables are defined (to be read by Drupal's settings.php)
+#  - the 'sites' volume is not an anonymous volume
+#  - the other volumes have been removed (as the CMS will be headless)
+
+version: '3.1'
+
+services:
+
+  drupal:
+    image: drupal:8.7.1-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./data/sites:/var/www/html/sites
+    environment:
+      DRUPAL_DBNAME: postgres
+      DRUPAL_DBHOST: postgres
+      DRUPAL_DBPORT: 5432
+      DRUPAL_USERNAME: postgres
+      DRUPAL_PASSWORD: example
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: example
