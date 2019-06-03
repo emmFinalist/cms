@@ -2,7 +2,7 @@ Drupal die in een Docker container draait. De bedoeling is dat Drupal wordt _hea
 
 Zie de [officiele Drupal container](https://hub.docker.com/_/drupal/) op Docker Hub.
 
-Gebruik de `docker-compose` in je eigen ontwikkelomgeving.
+Gebruik de `docker-compose` in je eigen ontwikkelomgeving. Deze start drupal, nginx en postgres op.
 
 ## To do
 - Voeg een module toe aan Drupal om Openstack/ObjectStorage (Swift) te kunnen gebruiken. Zie bijvoorbeeld:
