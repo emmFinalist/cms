@@ -8,17 +8,17 @@
 #  - environment variables are defined (to be read by Drupal's settings.php)
 #  - the 'sites' volume is not an anonymous volume
 #  - the other volumes have been removed (as the CMS will be headless)
-#  - add a Postgres DB (only required for local development)
-#  - add a nginx webserver (only required for local development)
 
-version: '3'
+version: '3.1'
 
 services:
 
   drupal:
-    build: .
+    image: drupal:8.7.1-apache
+    ports:
+      - 8080:80
     volumes:
-      - drupal_src:/var/www/html
+      - ./data/sites:/var/www/html/sites
     environment:
       DRUPAL_DBNAME: postgres
       DRUPAL_DBHOST: postgres
@@ -30,16 +30,3 @@ services:
     image: postgres:10
     environment:
       POSTGRES_PASSWORD: example
-
-  web:
-    image: nginx:1.15
-    ports:
-      - "8080:80"
-    links:
-      - drupal
-    volumes:
-      - ./site.conf:/etc/nginx/conf.d/default.conf
-      - drupal_src:/var/www/html
-
-volumes:
-  drupal_src:
