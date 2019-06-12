@@ -14,11 +14,12 @@ version: '3.1'
 services:
 
   drupal:
-    image: drupal:8.7.1-apache
+    build: .
+    # image: drupal:8.7.1-apache
     ports:
       - 8080:80
-    volumes:
-      - ./data/sites:/var/www/html/sites
+    # volumes:
+    #   - ./data/sites:/var/www/html/sites
     environment:
       DRUPAL_DBNAME: postgres
       DRUPAL_DBHOST: postgres

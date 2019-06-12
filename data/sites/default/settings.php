@@ -788,3 +788,9 @@ $databases['default']['default'] = array (
   'driver' => 'pgsql',
 );
 $config_directories['sync'] = 'sites/default/files/config_fc4qK3oeMQsTPc9fzDF3H5T9s_AsAts6c6spw03EGzyaD4cO1cZ8N5ejApNBHDqmbveL7kge-g/sync';
+
+$settings['trusted_host_patterns'] = [
+  '^localhost$',                              
+  '^cms.data.amsterdam.nl$',
+  '^acc.cms.data.amsterdam.nl$',
+];
