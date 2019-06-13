@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'XkYZBXW_OJ7hEbuffuDyixreygafjJ2sbUwsafXQl4k_xFYaLTs6DwRR74MmIDZx0hyqZ_QZYg';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -790,7 +790,7 @@ $databases['default']['default'] = array (
 $config_directories['sync'] = 'sites/default/files/config_fc4qK3oeMQsTPc9fzDF3H5T9s_AsAts6c6spw03EGzyaD4cO1cZ8N5ejApNBHDqmbveL7kge-g/sync';
 
 $settings['trusted_host_patterns'] = [
-  '^localhost$',                              
+  '^localhost$',
   '^cms.data.amsterdam.nl$',
   '^acc.cms.data.amsterdam.nl$',
 ];

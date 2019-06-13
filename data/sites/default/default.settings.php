@@ -777,3 +777,15 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+#
+$databases['default']['default'] = array (
+  'database' => getenv('DRUPAL_DBNAME'),
+  'username' => getenv('DRUPAL_USERNAME'),
+  'password' => getenv('DRUPAL_PASSWORD'),
+  'prefix' => '',
+  'host' => getenv('DRUPAL_DBHOST'),
+  'port' => getenv('DRUPAL_DBPORT'),
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+  'driver' => 'pgsql',
+);
+

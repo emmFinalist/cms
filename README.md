@@ -8,3 +8,9 @@ Gebruik de `docker-compose` in je eigen ontwikkelomgeving. Deze start drupal, ng
 - Voeg een module toe aan Drupal om Openstack/ObjectStorage (Swift) te kunnen gebruiken. Zie bijvoorbeeld:
   *  [Flysystem](https://www.drupal.org/project/flysystem)
 
+
+## Variables
+
+  * CLOUDFUSE_USER
+  * CLOUDFUSE_PASSWORD
+  * CLOUDFUSE_TENANT

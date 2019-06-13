@@ -3,7 +3,7 @@
 # Access via "http://localhost:8080"
 #   (or "http://$(docker-machine ip):8080" if using docker-machine)
 #
-# This is a close copy of an example at https://hub.docker.com/_/drupal 
+# This is a close copy of an example at https://hub.docker.com/_/drupal
 # Differences:
 #  - environment variables are defined (to be read by Drupal's settings.php)
 #  - the 'sites' volume is not an anonymous volume
@@ -26,8 +26,12 @@ services:
       DRUPAL_DBPORT: 5432
       DRUPAL_USERNAME: postgres
       DRUPAL_PASSWORD: example
+    volumes:
+      - ./appshared:/app/shared
 
   postgres:
     image: postgres:10
     environment:
       POSTGRES_PASSWORD: example
+    volumes:
+      - ./db:/var/lib/postgresql/data
