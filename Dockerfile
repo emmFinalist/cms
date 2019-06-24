@@ -1,8 +1,9 @@
-FROM drupal:8.7.1-apache
+FROM drupal:8.7.3-apache
 
 # Set workdir
 WORKDIR /var/www/html/
 
+COPY data/php/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY data/sites /template/sites
 RUN mkdir -p /app/shared
 RUN \
