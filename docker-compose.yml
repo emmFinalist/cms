@@ -15,23 +15,35 @@ services:
 
   drupal:
     build: .
-    # image: drupal:8.7.1-apache
     ports:
       - 8080:80
-    # volumes:
-    #   - ./data/sites:/var/www/html/sites
+    volumes:
+      - ./shared:/app/shared
+      - ./data/sites:/var/www/html/sites
     environment:
-      DRUPAL_DBNAME: postgres
-      DRUPAL_DBHOST: postgres
+      DRUPAL_DBNAME: cms
+      DRUPAL_DBHOST: database
       DRUPAL_DBPORT: 5432
-      DRUPAL_USERNAME: postgres
-      DRUPAL_PASSWORD: example
-    volumes:
-      - ./appshared:/app/shared
+      DRUPAL_USERNAME: cms
+      DRUPAL_PASSWORD: insecure
 
-  postgres:
-    image: postgres:10
+  database:
+    image: amsterdam/postgres11
+    ports:
+      - "5434:5432"
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_DB: cms
+      POSTGRES_USER: cms
+      POSTGRES_PASSWORD: insecure
     volumes:
+      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
       - ./db:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: amsterdam/elasticsearch6
+    command: elasticsearch -Ehttp.host=0.0.0.0 -Etransport.host=127.0.0.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"      
