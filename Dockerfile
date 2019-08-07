@@ -2,11 +2,12 @@ FROM drupal:8.7.5-apache
 
 # Set workdir
 WORKDIR /var/www/html/
-
+ENV COMPOSER_ALLOW_SUPERUSER 1
 # Install composer, require the elasticsearch dependencies
 RUN apt update && apt install -y git unzip
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer config --global repo.packagist composer https://packagist.org
 RUN composer require 'drupal/console:~1.0' --prefer-dist --optimize-autoloader
 RUN curl https://drupalconsole.com/installer -L -o drupal.phar && \
     mv drupal.phar /usr/local/bin/drupal && \
