@@ -12,7 +12,7 @@ RUN curl https://drupalconsole.com/installer -L -o drupal.phar && \
     mv drupal.phar /usr/local/bin/drupal && \
     chmod +x /usr/local/bin/drupal
 
-RUN composer require 'drupal/elasticsearch_connector:^5.0'
+RUN composer --no-ansi require 'drupal/elasticsearch_connector:^5.0'
 RUN composer --no-ansi require 'drupal/search_api:^1.8'
 RUN drupal module:install elasticsearch_connector search_api
 
