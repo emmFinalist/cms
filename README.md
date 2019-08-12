@@ -4,13 +4,3 @@ Zie de [officiele Drupal container](https://hub.docker.com/_/drupal/) op Docker 
 
 Gebruik de `docker-compose` in je eigen ontwikkelomgeving. Deze start drupal, nginx en postgres op.
 
-## To do
-- Voeg een module toe aan Drupal om Openstack/ObjectStorage (Swift) te kunnen gebruiken. Zie bijvoorbeeld:
-  *  [Flysystem](https://www.drupal.org/project/flysystem)
-
-
-## Variables
-
-  * CLOUDFUSE_USER
-  * CLOUDFUSE_PASSWORD
-  * CLOUDFUSE_TENANT
