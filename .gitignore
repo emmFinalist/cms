@@ -1,5 +1,5 @@
-appshared
-db
+appshared*
+db*
 data
 shared
 bak

@@ -16,10 +16,11 @@ services:
   drupal:
     build: .
     ports:
-      - 8080:80
+      - 9090:80
     volumes:
       - ./shared:/app/shared
       - ./data/sites:/var/www/html/sites
+      - /etc/ssl/certs/:/etc/ssl/certs/:ro
     environment:
       DRUPAL_DBNAME: cms
       DRUPAL_DBHOST: database
