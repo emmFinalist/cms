@@ -16,9 +16,9 @@ services:
   drupal:
     build: .
     ports:
-      - 9090:80
+      - 9091:80
     volumes:
-      - ./shared:/app/shared
+      - ./appshared:/app/shared
       - ./data/sites:/var/www/html/sites
       - /etc/ssl/certs/:/etc/ssl/certs/:ro
     environment:
