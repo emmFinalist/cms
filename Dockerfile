@@ -24,7 +24,7 @@ RUN \
     ln -s /app/shared/$I /var/www/html/$I; \
   done
 
-RUN composer require --no-suggest --no-interaction webonyx/graphql-php
+RUN composer require --no-suggest --no-update --no-interaction webonyx/graphql-php
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
