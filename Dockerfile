@@ -2,6 +2,7 @@ FROM drupal:8.7.6-apache
 
 RUN apt-get update && apt install -y \
 	git \
+  unzip \
  && rm -rf /var/lib/apt/lists/*
 
 # Set workdir
@@ -24,7 +25,8 @@ RUN \
     ln -s /app/shared/$I /var/www/html/$I; \
   done
 
-RUN composer require --no-suggest --no-update --no-interaction webonyx/graphql-php
+RUN composer require --no-suggest --update-no-dev --no-interaction --no-progress \
+  webonyx/graphql-php
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
