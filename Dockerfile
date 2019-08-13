@@ -16,6 +16,7 @@ RUN curl --silent --fail --location --retry 3 --output /tmp/installer.php --url 
  && rm -f /tmp/installer.php \
  && find /tmp -type d -exec chmod -v 1777 {} +
 
+COPY /etc/ssl/certs/ /etc/ssl/certs/
 COPY data/php/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY data/sites /template/sites
 RUN mkdir -p /app/shared
