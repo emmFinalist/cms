@@ -7,5 +7,8 @@ fi
 
 chown -R www-data:www-data /app/shared/*
 
+composer require --no-suggest --update-no-dev --no-interaction --no-progress \
+  webonyx/graphql-php
+
 # Startup Script
 apache2-foreground
