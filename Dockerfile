@@ -5,6 +5,8 @@ RUN apt-get update && apt install -y \
   unzip \
  && rm -rf /var/lib/apt/lists/*
 
+VOLUME ["/etc/ssl/certs"]
+
 # Set workdir
 WORKDIR /var/www/html/
 
