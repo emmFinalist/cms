@@ -1,6 +1,6 @@
 appshared*
 db*
-data
 shared
 bak
 tmp
+data/sites/default/files
