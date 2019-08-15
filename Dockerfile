@@ -1,11 +1,9 @@
 FROM drupal:8.7.6-apache
 
 RUN apt-get update && apt install -y \
-	git \
+  git \
   unzip \
  && rm -rf /var/lib/apt/lists/*
-
-VOLUME ["/etc/ssl/certs"]
 
 # Set workdir
 WORKDIR /var/www/html/
