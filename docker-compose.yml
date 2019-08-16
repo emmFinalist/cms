@@ -9,7 +9,7 @@
 #  - the 'sites' volume is not an anonymous volume
 #  - the other volumes have been removed (as the CMS will be headless)
 
-version: '3.1'
+version: '3.5'
 
 services:
 
