@@ -1,5 +1,4 @@
 FROM aditudorache/drupal:8
-
 # Disable the installation of the modules. Will be implemented later when the build is working
 #RUN drupal module:uninstall search
 #RUN drupal module:install elasticsearch_connector search_api grapshql_core graphql_search_api
