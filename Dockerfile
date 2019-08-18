@@ -1,11 +1,14 @@
 FROM aditudorache/drupal:8
-# Disable the installation of the modules. Will be implemented later when the build is working
-#RUN drupal module:uninstall search
-#RUN drupal module:install elasticsearch_connector search_api grapshql_core graphql_search_api
-#RUN drush cr
 
-#RUN drupal module:uninstall graphql_search_api grapshql_core graphql search_api elasticsearch_connector
+COPY data/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+COPY data/sites /template/sites
+RUN mkdir -p /app/shared
+RUN \
+  for I in modules profiles sites themes; do \
+    rm -rf /var/www/html/$I; \
+    ln -s /app/shared/$I /var/www/html/$I; \
+  done
 
-# COPY entrypoint.sh /entrypoint.sh
-# RUN chmod 755 /entrypoint.sh
-# ENTRYPOINT [ "/entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh"]
