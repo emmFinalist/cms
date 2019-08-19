@@ -1,2 +1,6 @@
-appshared
-db
+appshared*
+db*
+shared
+bak
+tmp
+data/sites/default/files

@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 mkdir -p /app/shared/{modules,profiles,sites,themes}
 
 if [ ! -d /app/shared/sites/default ]; then

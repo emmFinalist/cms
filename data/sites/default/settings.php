@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'kgiX2tUXE_pTFa3iUEY_M74suwJC6cml6VbxeLN3elR1Sl5QeMLTQzDmCoxX4COB6Zau0vt9IQ';
 
 /**
  * Deployment identifier.
@@ -790,7 +790,19 @@ $databases['default']['default'] = array (
 $config_directories['sync'] = 'sites/default/files/config_fc4qK3oeMQsTPc9fzDF3H5T9s_AsAts6c6spw03EGzyaD4cO1cZ8N5ejApNBHDqmbveL7kge-g/sync';
 
 $settings['trusted_host_patterns'] = [
+  '*',
+  '^localhost$',
   '^localhost$',
   '^cms.data.amsterdam.nl$',
   '^acc.cms.data.amsterdam.nl$',
 ];
+// $databases['default']['default'] = array (
+//   'database' => 'cms',
+//   'username' => 'cms',
+//   'password' => 'insecure',
+//   'prefix' => '',
+//   'host' => 'database',
+//   'port' => '5432',
+//   'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+//   'driver' => 'pgsql',
+// );
