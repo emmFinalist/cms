@@ -787,22 +787,11 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
   'driver' => 'pgsql',
 );
-$config_directories['sync'] = 'sites/default/files/config_fc4qK3oeMQsTPc9fzDF3H5T9s_AsAts6c6spw03EGzyaD4cO1cZ8N5ejApNBHDqmbveL7kge-g/sync';
 
-$settings['trusted_host_patterns'] = [
-  '*',
-  '^localhost$',
-  '^localhost$',
+$config_directories['sync'] = 'sites/default/files/config_fc4qK3oeMQsTPc9fzDF3H5T9s_AsAts6c6spw03EGzyaD4cO1cZ8N5ejApNBHDqmbveL7kge-g/sync';
+ 
+$settings['trusted_host_patterns'] = array (
+  '^localhost(.*)$',
   '^cms.data.amsterdam.nl$',
   '^acc.cms.data.amsterdam.nl$',
-];
-// $databases['default']['default'] = array (
-//   'database' => 'cms',
-//   'username' => 'cms',
-//   'password' => 'insecure',
-//   'prefix' => '',
-//   'host' => 'database',
-//   'port' => '5432',
-//   'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
-//   'driver' => 'pgsql',
-// );
+);

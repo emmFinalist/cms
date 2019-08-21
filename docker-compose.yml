@@ -1,7 +1,4 @@
-# Drupal with PostgreSQL
-#
-# Access via "http://localhost:8080"
-#   (or "http://$(docker-machine ip):8080" if using docker-machine)
+# Drupal with PostgreSQL and Elasticsearch
 #
 # This is a close copy of an example at https://hub.docker.com/_/drupal
 # Differences:
