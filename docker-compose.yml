@@ -24,6 +24,7 @@ services:
       DRUPAL_DBPORT: 5432
       DRUPAL_USERNAME: cms
       DRUPAL_PASSWORD: insecure
+      DRUPAL_HASH_SALT: fake-salt
 
   database:
     image: amsterdam/postgres11
