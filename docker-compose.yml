@@ -15,7 +15,7 @@ services:
     ports:
       - 9091:80
     volumes:
-      - ./app/shared/modules:/app/shared/modules
+      - ./app/modules:/app/modules
       - ./app/shared/profiles:/app/shared/profiles
       - ./app/shared/sites:/app/shared/sites
       - ./app/shared/themes:/app/shared/themes
