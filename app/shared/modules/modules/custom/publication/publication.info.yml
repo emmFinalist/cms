@@ -1,0 +1,15 @@
+name: Publication
+description: 'Provides Publication content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - field
+  - file
+  - image
+  - menu_ui
+  - node
+  - options
+  - path
+  - text
+  - user

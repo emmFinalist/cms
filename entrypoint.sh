@@ -1,6 +1,8 @@
 #!/bin/sh
-mkdir -p /app/shared/{modules,profiles,sites,themes}
-
+for I in modules profiles sites themes; do \
+  mkdir -p /app/shared/$I
+done
+ 
 if [ ! -d /app/shared/sites/default ]; then
   cp -rv /template/sites/* /app/shared/sites/
 fi

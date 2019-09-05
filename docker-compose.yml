@@ -15,15 +15,17 @@ services:
     ports:
       - 9091:80
     volumes:
-      - ./appshared:/app/shared
-      - ./data/sites:/var/www/html/sites
-      - /etc/ssl/certs/:/etc/ssl/certs/:ro
+      - ./app/shared/modules:/app/shared/modules
+      - ./app/shared/profiles:/app/shared/profiles
+      - ./app/shared/sites:/app/shared/sites
+      - ./app/shared/themes:/app/shared/themes
     environment:
       DRUPAL_DBNAME: cms
       DRUPAL_DBHOST: database
       DRUPAL_DBPORT: 5432
       DRUPAL_USERNAME: cms
       DRUPAL_PASSWORD: insecure
+      DRUPAL_HASH_SALT: salt
 
   database:
     image: amsterdam/postgres11
