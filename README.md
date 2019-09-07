@@ -46,53 +46,53 @@ Update this list each time a module is installed/updated
  --------------------- --------------------------------------------------- --------- ---------------- 
   Package               Name                                                Status    Version         
  --------------------- --------------------------------------------------- --------- ---------------- 
-  Core                  Automated Cron (automated_cron)                     Enabled   8.7.6           
-  Core                  BigPipe (big_pipe)                                  Enabled   8.7.6           
-  Core                  Block (block)                                       Enabled   8.7.6           
-  Core                  Custom Block (block_content)                        Enabled   8.7.6           
-  Core                  Breakpoint (breakpoint)                             Enabled   8.7.6           
-  Core                  CKEditor (ckeditor)                                 Enabled   8.7.6           
-  Core                  Color (color)                                       Enabled   8.7.6           
-  Core                  Comment (comment)                                   Enabled   8.7.6           
-  Core                  Configuration Manager (config)                      Enabled   8.7.6           
-  Core                  Contact (contact)                                   Enabled   8.7.6           
-  Core                  Contextual Links (contextual)                       Enabled   8.7.6           
-  Field types           Datetime (datetime)                                 Enabled   8.7.6           
-  Core                  Database Logging (dblog)                            Enabled   8.7.6           
-  Core                  Internal Dynamic Page Cache (dynamic_page_cache)    Enabled   8.7.6           
-  Core                  Text Editor (editor)                                Enabled   8.7.6           
-  Core                  Field (field)                                       Enabled   8.7.6           
-  Core                  Field UI (field_ui)                                 Enabled   8.7.6           
-  Field types           File (file)                                         Enabled   8.7.6           
-  Core                  Filter (filter)                                     Enabled   8.7.6           
-  Core                  Help (help)                                         Enabled   8.7.6           
-  Core                  History (history)                                   Enabled   8.7.6           
-  Field types           Image (image)                                       Enabled   8.7.6           
-  Web services          JSON:API (jsonapi)                                  Enabled   8.7.6           
-  Field types           Link (link)                                         Enabled   8.7.6           
-  Core                  Media (media)                                       Enabled   8.7.6           
-  Core (Experimental)   Media Library (media_library)                       Enabled   8.7.6           
-  Core                  Custom Menu Links (menu_link_content)               Enabled   8.7.6           
-  Core                  Menu UI (menu_ui)                                   Enabled   8.7.6           
-  Core                  Node (node)                                         Enabled   8.7.6           
-  Field types           Options (options)                                   Enabled   8.7.6           
-  Core                  Internal Page Cache (page_cache)                    Enabled   8.7.6           
-  Core                  Path (path)                                         Enabled   8.7.6           
-  Core                  Quick Edit (quickedit)                              Enabled   8.7.6           
-  Core                  RDF (rdf)                                           Enabled   8.7.6           
-  Web services          RESTful Web Services (rest)                         Enabled   8.7.6           
-  Core                  Search (search)                                     Enabled   8.7.6           
-  Web services          Serialization (serialization)                       Enabled   8.7.6           
-  Core                  Shortcut (shortcut)                                 Enabled   8.7.6           
-  Core                  System (system)                                     Enabled   8.7.6           
-  Core                  Taxonomy (taxonomy)                                 Enabled   8.7.6           
-  Field types           Text (text)                                         Enabled   8.7.6           
-  Core                  Toolbar (toolbar)                                   Enabled   8.7.6           
-  Core                  Tour (tour)                                         Enabled   8.7.6           
-  Core                  Update Manager (update)                             Enabled   8.7.6           
-  Core                  User (user)                                         Enabled   8.7.6           
-  Core                  Views (views)                                       Enabled   8.7.6           
-  Core                  Views UI (views_ui)                                 Enabled   8.7.6           
+  Core                  Automated Cron (automated_cron)                     Enabled   8.7.7           
+  Core                  BigPipe (big_pipe)                                  Enabled   8.7.7           
+  Core                  Block (block)                                       Enabled   8.7.7           
+  Core                  Custom Block (block_content)                        Enabled   8.7.7           
+  Core                  Breakpoint (breakpoint)                             Enabled   8.7.7           
+  Core                  CKEditor (ckeditor)                                 Enabled   8.7.7           
+  Core                  Color (color)                                       Enabled   8.7.7           
+  Core                  Comment (comment)                                   Enabled   8.7.7           
+  Core                  Configuration Manager (config)                      Enabled   8.7.7           
+  Core                  Contact (contact)                                   Enabled   8.7.7           
+  Core                  Contextual Links (contextual)                       Enabled   8.7.7           
+  Field types           Datetime (datetime)                                 Enabled   8.7.7           
+  Core                  Database Logging (dblog)                            Enabled   8.7.7           
+  Core                  Internal Dynamic Page Cache (dynamic_page_cache)    Enabled   8.7.7           
+  Core                  Text Editor (editor)                                Enabled   8.7.7           
+  Core                  Field (field)                                       Enabled   8.7.7           
+  Core                  Field UI (field_ui)                                 Enabled   8.7.7           
+  Field types           File (file)                                         Enabled   8.7.7           
+  Core                  Filter (filter)                                     Enabled   8.7.7           
+  Core                  Help (help)                                         Enabled   8.7.7           
+  Core                  History (history)                                   Enabled   8.7.7           
+  Field types           Image (image)                                       Enabled   8.7.7           
+  Web services          JSON:API (jsonapi)                                  Enabled   8.7.7           
+  Field types           Link (link)                                         Enabled   8.7.7           
+  Core                  Media (media)                                       Enabled   8.7.7           
+  Core (Experimental)   Media Library (media_library)                       Enabled   8.7.7           
+  Core                  Custom Menu Links (menu_link_content)               Enabled   8.7.7           
+  Core                  Menu UI (menu_ui)                                   Enabled   8.7.7           
+  Core                  Node (node)                                         Enabled   8.7.7           
+  Field types           Options (options)                                   Enabled   8.7.7           
+  Core                  Internal Page Cache (page_cache)                    Enabled   8.7.7           
+  Core                  Path (path)                                         Enabled   8.7.7           
+  Core                  Quick Edit (quickedit)                              Enabled   8.7.7           
+  Core                  RDF (rdf)                                           Enabled   8.7.7           
+  Web services          RESTful Web Services (rest)                         Enabled   8.7.7           
+  Core                  Search (search)                                     Enabled   8.7.7           
+  Web services          Serialization (serialization)                       Enabled   8.7.7           
+  Core                  Shortcut (shortcut)                                 Enabled   8.7.7           
+  Core                  System (system)                                     Enabled   8.7.7           
+  Core                  Taxonomy (taxonomy)                                 Enabled   8.7.7           
+  Field types           Text (text)                                         Enabled   8.7.7           
+  Core                  Toolbar (toolbar)                                   Enabled   8.7.7           
+  Core                  Tour (tour)                                         Enabled   8.7.7           
+  Core                  Update Manager (update)                             Enabled   8.7.7           
+  Core                  User (user)                                         Enabled   8.7.7           
+  Core                  Views (views)                                       Enabled   8.7.7           
+  Core                  Views UI (views_ui)                                 Enabled   8.7.7           
   Other                 Configuration Update Base (config_update)           Enabled   8.x-1.6         
   Web services          Consumer Image Styles (consumer_image_styles)       Enabled   8.x-3.0         
   Authentication        Consumers (consumers)                               Enabled   8.x-1.9         

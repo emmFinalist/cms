@@ -26,7 +26,9 @@ services:
       DRUPAL_USERNAME: cms
       DRUPAL_PASSWORD: insecure
       DRUPAL_HASH_SALT: salt
-
+    links:
+      - elasticsearch:elastic-index.service.consul
+      
   database:
     image: amsterdam/postgres11
     ports:
