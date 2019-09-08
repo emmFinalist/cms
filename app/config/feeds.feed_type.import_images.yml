@@ -1,0 +1,61 @@
+uuid: fc2d39fd-9e72-4da7-970b-008f27fddf04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - media
+label: 'Import images'
+id: import_images
+description: 'Convert image files in public://image to media entities'
+import_period: 3600
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:media'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    bundle: image
+custom_sources:
+  file:
+    label: file
+    value: file
+    machine_name: file
+  name:
+    label: name
+    value: name
+    machine_name: name
+mappings:
+  -
+    target: field_media_image
+    map:
+      target_id: file
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      reference_by: filename
+      autocreate: false
+  -
+    target: name
+    map:
+      value: name
+    unique:
+      value: '1'

@@ -1,0 +1,180 @@
+uuid: 7a27805a-7043-4806-8c37-f591b218e860
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.publication.field_cover_image
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_file_size
+    - field.field.node.publication.field_file_type
+    - field.field.node.publication.field_publication_source
+    - field.field.node.publication.field_publication_year
+    - field.field.node.publication.field_short_title
+    - field.field.node.publication.field_slug
+    - node.type.publication
+  module:
+    - node
+label: 'Import publications'
+id: import_publications
+description: 'Import publications from file'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 1
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: publication
+custom_sources:
+  publication_title:
+    label: publication_title
+    value: publication_title
+    machine_name: publication_title
+  publication_cover_image:
+    label: publication_cover_image
+    value: publication_cover_image
+    machine_name: publication_cover_image
+  publication_file:
+    label: publication_file
+    value: publication_file
+    machine_name: publication_file
+  publication_file_size:
+    label: publication_file_size
+    value: publication_file_size
+    machine_name: publication_file_size
+  publication_file_type:
+    label: publication_file_type
+    value: publication_file_type
+    machine_name: publication_file_type
+  publication_source:
+    label: publication_source
+    value: publication_source
+    machine_name: publication_source
+  import_publication_title:
+    label: publication_title
+    value: publication_title
+    machine_name: import_publication_title
+  import_publication_cover_image:
+    label: publication_cover_image
+    value: publication_cover_image
+    machine_name: import_publication_cover_image
+  import_publication_file:
+    label: publication_file
+    value: publication_file
+    machine_name: import_publication_file
+  import_publication_file_size:
+    label: publication_file_size
+    value: publication_file_size
+    machine_name: import_publication_file_size
+  import_publication_file_type:
+    label: publication_file_type
+    value: publication_file_type
+    machine_name: import_publication_file_type
+  import_publication_source:
+    label: publication_source
+    value: publication_source
+    machine_name: import_publication_source
+  publication_year:
+    label: import_publication_year
+    value: import_publication_year
+    machine_name: publication_year
+  title:
+    label: title
+    value: title
+    machine_name: title
+  size:
+    label: size
+    value: size
+    machine_name: size
+  type:
+    label: type
+    value: type
+    machine_name: type
+  source:
+    label: source
+    value: source
+    machine_name: source
+  year:
+    label: year
+    value: year
+    machine_name: year
+  file:
+    label: file
+    value: file
+    machine_name: file
+  cover:
+    label: cover
+    value: cover
+    machine_name: cover
+  slug:
+    label: slug
+    value: slug
+    machine_name: slug
+  short_title:
+    label: short-title
+    value: short-title
+    machine_name: short_title
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+  -
+    target: field_file_size
+    map:
+      value: size
+    unique: {  }
+  -
+    target: field_file_type
+    map:
+      value: type
+  -
+    target: field_publication_source
+    map:
+      value: source
+    unique: {  }
+  -
+    target: field_publication_year
+    map:
+      value: year
+  -
+    target: field_file
+    map:
+      target_id: file
+    settings:
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_cover_image
+    map:
+      target_id: cover
+    settings:
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_slug
+    map:
+      value: slug
+    unique:
+      value: '1'
+  -
+    target: field_short_title
+    map:
+      value: short_title
+    unique: {  }

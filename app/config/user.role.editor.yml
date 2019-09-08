@@ -1,0 +1,35 @@
+uuid: 4db4841d-28ac-44fd-a9f7-aa8ee6636280
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'create article content'
+  - 'create notification content'
+  - 'create publication content'
+  - 'create special content'
+  - 'delete any article content'
+  - 'delete any notification content'
+  - 'delete any publication content'
+  - 'delete any special content'
+  - 'delete own article content'
+  - 'delete own notification content'
+  - 'delete own publication content'
+  - 'delete own special content'
+  - 'edit any article content'
+  - 'edit any notification content'
+  - 'edit any publication content'
+  - 'edit any special content'
+  - 'edit own article content'
+  - 'edit own notification content'
+  - 'edit own publication content'
+  - 'edit own special content'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view own unpublished content'

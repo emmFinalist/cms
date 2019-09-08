@@ -3,6 +3,7 @@ FROM aditudorache/drupal:8.7.7
 COPY data/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY data/sites /template/sites
 COPY app/modules /app/modules
+COPY app/config /app/config
 
 RUN \
   for I in profiles sites themes; do \

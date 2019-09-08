@@ -1,0 +1,17 @@
+uuid: a39b2b11-16e0-46ff-8919-01d29245cfc3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Link
+type: link
+description: 'Een interne of externe link'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

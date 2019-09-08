@@ -1,0 +1,23 @@
+uuid: 791fd656-e981-45ac-8900-b8b47879ec41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iframe_link
+    - node.type.special
+  module:
+    - link
+id: node.special.field_iframe_link
+field_name: field_iframe_link
+entity_type: node
+bundle: special
+label: 'iFrame link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

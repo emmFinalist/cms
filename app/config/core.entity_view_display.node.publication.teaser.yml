@@ -1,0 +1,60 @@
+uuid: 6e72b2c7-e4e5-460b-8bfb-22ece7c7f8d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.body
+    - field.field.node.publication.feeds_item
+    - field.field.node.publication.field_cover_image
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_file_size
+    - field.field.node.publication.field_file_type
+    - field.field.node.publication.field_intro
+    - field.field.node.publication.field_publication_month
+    - field.field.node.publication.field_publication_source
+    - field.field.node.publication.field_publication_year
+    - field.field.node.publication.field_short_title
+    - field.field.node.publication.field_slug
+    - field.field.node.publication.field_teaser
+    - field.field.node.publication.field_teaser_image
+    - node.type.publication
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: QXLvW-Po4-zQVl_2cgGuoH2TrJh8FtpKfMZTbzmvMzI
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_cover_image: true
+  field_file: true
+  field_file_size: true
+  field_file_type: true
+  field_intro: true
+  field_publication_day: true
+  field_publication_month: true
+  field_publication_source: true
+  field_publication_year: true
+  field_short_title: true
+  field_slug: true
+  field_teaser: true
+  field_teaser_image: true
+  search_api_excerpt: true

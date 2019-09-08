@@ -1,0 +1,19 @@
+uuid: ee172930-82a6-44f8-8b59-38f8a6c2905d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slug
+    - node.type.special
+id: node.special.field_slug
+field_name: field_slug
+entity_type: node
+bundle: special
+label: slug
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

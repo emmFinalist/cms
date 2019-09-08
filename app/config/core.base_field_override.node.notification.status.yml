@@ -1,0 +1,22 @@
+uuid: 9666d5ec-78c1-4e88-99c1-24cf0e9de4dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notification
+id: node.notification.status
+field_name: status
+entity_type: node
+bundle: notification
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

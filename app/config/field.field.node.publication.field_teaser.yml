@@ -1,0 +1,19 @@
+uuid: 5cba8362-1460-486d-a57f-5808e47155db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.publication
+id: node.publication.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: publication
+label: Teaser
+description: 'De tekst die getoond word top de voorpagina en andere overzichtspagina''s.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

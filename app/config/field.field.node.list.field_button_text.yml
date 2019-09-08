@@ -1,0 +1,19 @@
+uuid: a81d8b1c-3733-47ee-a72d-5fec3370daec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button_text
+    - node.type.list
+id: node.list.field_button_text
+field_name: field_button_text
+entity_type: node
+bundle: list
+label: 'Button text'
+description: 'De tekst op de knop onder de lijst (bijvoorbeeld: Lees meer).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

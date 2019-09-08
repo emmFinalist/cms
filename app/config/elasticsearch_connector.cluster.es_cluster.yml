@@ -1,0 +1,14 @@
+uuid: c15b9b9b-0e48-4959-862c-a5238af7ac4a
+langcode: en
+status: '1'
+dependencies: {  }
+cluster_id: es_cluster
+name: es-cluster
+url: 'http://elastic-index.service.consul:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'

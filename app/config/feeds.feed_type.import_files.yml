@@ -1,0 +1,60 @@
+uuid: c9f36145-2856-4fef-80c6-36c40b6b5c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_media_file
+    - media.type.file
+  module:
+    - media
+label: 'Import files'
+id: import_files
+description: 'Import files from public://publications/all-publications.csv'
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:media'
+processor_configuration:
+  update_existing: 1
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    bundle: file
+custom_sources:
+  file:
+    label: file
+    value: file
+    machine_name: file
+  name:
+    label: name
+    value: name
+    machine_name: name
+mappings:
+  -
+    target: field_media_file
+    map:
+      target_id: file
+      description: ''
+    settings:
+      existing: 2
+      reference_by: filename
+      autocreate: false
+  -
+    target: name
+    map:
+      value: name
+    unique:
+      value: '1'

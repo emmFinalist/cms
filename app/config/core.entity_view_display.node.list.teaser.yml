@@ -1,0 +1,24 @@
+uuid: 08e996aa-83a7-4a53-a534-9ce0aa911c66
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.list
+  module:
+    - user
+id: node.list.teaser
+targetEntityType: node
+bundle: list
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_button_link: true
+  field_button_text: true
+  field_items: true
+  search_api_excerpt: true

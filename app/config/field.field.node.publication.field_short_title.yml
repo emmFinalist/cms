@@ -1,0 +1,19 @@
+uuid: ba2f425f-a1e1-4ad6-912c-8670b44e93dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_title
+    - node.type.publication
+id: node.publication.field_short_title
+field_name: field_short_title
+entity_type: node
+bundle: publication
+label: 'Short title'
+description: 'Een korte titel die gebruikt wordt op de voorpagina en op overzichtspagina''s'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

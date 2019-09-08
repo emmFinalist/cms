@@ -1,0 +1,27 @@
+uuid: bf5b7e74-0e87-4e5d-8066-8c5773a3d092
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.link.field_link
+    - field.field.node.link.field_teaser
+    - field.field.node.link.field_teaser_image
+    - node.type.link
+  module:
+    - user
+id: node.link.teaser
+targetEntityType: node
+bundle: link
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_teaser: true
+  field_teaser_image: true
+  search_api_excerpt: true
