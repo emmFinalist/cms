@@ -4,16 +4,62 @@ status: true
 dependencies:
   module:
     - node
-    - search_api
-    - file
     - media
+    - file
+    - search_api
   config:
+    - field.storage.node.body
+    - field.storage.node.field_intro
+    - field.storage.node.field_short_title
+    - field.storage.node.field_slug
+    - field.storage.node.field_teaser_image
+    - field.storage.media.field_media_image
     - search_api.server.elasticsearch_server
 id: articles_index
 name: articles-index
 description: ''
 read_only: false
 field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_intro:
+    label: Intro
+    datasource_id: 'entity:node'
+    property_path: field_intro
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_intro
+  field_short_title:
+    label: 'Short title'
+    datasource_id: 'entity:node'
+    property_path: field_short_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_short_title
+  field_slug:
+    label: slug
+    datasource_id: 'entity:node'
+    property_path: field_slug
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_slug
   nid:
     label: ID
     datasource_id: 'entity:node'
@@ -22,11 +68,48 @@ field_settings:
     dependencies:
       module:
         - node
+  processed:
+    label: 'Body » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'body:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
     type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: 'Teaser image » Media » Image » File » URI » Root-relative file URL'
+    datasource_id: 'entity:node'
+    property_path: 'field_teaser_image:entity:field_media_image:entity:uri:url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_image
+        - field.storage.media.field_media_image
+      module:
+        - media
+        - file
+        - file
+  uuid:
+    label: UUID
+    datasource_id: 'entity:node'
+    property_path: uuid
+    type: string
     dependencies:
       module:
         - node
