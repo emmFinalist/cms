@@ -76,6 +76,19 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  teaser_url:
+    label: 'Teaser image » Media » Image » File » URI » Root-relative file URL'
+    datasource_id: 'entity:node'
+    property_path: 'field_teaser_image:entity:field_media_image:entity:uri:url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_image
+        - field.storage.media.field_media_image
+      module:
+        - media
+        - file
+        - file
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -92,19 +105,6 @@ field_settings:
     dependencies:
       module:
         - node
-  url:
-    label: 'Teaser image » Media » Image » File » URI » Root-relative file URL'
-    datasource_id: 'entity:node'
-    property_path: 'field_teaser_image:entity:field_media_image:entity:uri:url'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_teaser_image
-        - field.storage.media.field_media_image
-      module:
-        - media
-        - file
-        - file
   uuid:
     label: UUID
     datasource_id: 'entity:node'
