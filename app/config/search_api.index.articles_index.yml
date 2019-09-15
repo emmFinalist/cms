@@ -10,10 +10,13 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_intro
+    - field.storage.node.field_publication_date
     - field.storage.node.field_short_title
     - field.storage.node.field_slug
+    - field.storage.node.field_teaser
     - field.storage.node.field_teaser_image
     - field.storage.media.field_media_image
+    - field.storage.node.field_special_type
     - search_api.server.elasticsearch_server
 id: articles_index
 name: articles-index
@@ -44,6 +47,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_intro
+  field_publication_date:
+    label: 'Publication date'
+    datasource_id: 'entity:node'
+    property_path: field_publication_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_publication_date
   field_short_title:
     label: 'Short title'
     datasource_id: 'entity:node'
@@ -60,6 +71,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_slug
+  field_special_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_special_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_special_type
+  field_teaser:
+    label: Teaser
+    datasource_id: 'entity:node'
+    property_path: field_teaser
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_teaser
   nid:
     label: ID
     datasource_id: 'entity:node'
