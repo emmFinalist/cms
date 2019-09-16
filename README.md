@@ -107,6 +107,23 @@ Update this list each time a module is installed/updated
   Other                 Typed Data (typed_data)                             Enabled   8.x-1.0-alpha3  
  --------------------- --------------------------------------------------- --------- ---------------- 
 
+## Update procedure
+
+This workflow can be used for both updating/upgrading of a module or changing the settings for elasticsearch
+
+- Start local a instance of the system
+
+```bash
+ docker-compose up -d
+```
+
+- Make the requested changes and test that it works. This step can be a local change or an import of the exported acceptance configuration
+- The changes should be reflected in one of the `./app` directories
+- Checkin the changes
+- Run the Jenkins pipeline 
+- For both acceptance and production go the synchronize utility (`https://<site-address>/admin/config/development/configuration`) and run the synchronization
+- When there are changes in the elasticsearch metadata, go the `Search API (admin/config/search/search-api)` module and reindex.
+
 ## Extra information
 
 The following sources have been used during the development of this project
@@ -114,3 +131,5 @@ The following sources have been used during the development of this project
 - [elasticsearch in drupal](https://opensenselabs.com/blog/tech/use-elastic-search-indexing-drupal)
 - [install composer](https://stackoverflow.com/questions/51443557/how-to-install-php-composer-inside-a-docker-container/51446468)
 - [update drupal core](https://www.drupal.org/docs/8/update/update-core-via-composer)
+
+
