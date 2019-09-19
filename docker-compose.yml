@@ -9,6 +9,17 @@
 version: '3.5'
 
 services:
+  imgproxy:
+    image: darthsim/imgproxy
+    ports:
+      - 8080:8080
+    volumes:
+      - ./app/shared/sites:/app/shared/sites
+    environment:
+      IMGPROXY_ENABLE_WEBP_DETECTION: 1
+      IMGPROXY_ENFORCE_WEBP: 1
+      IMGPROXY_LOCAL_FILESYSTEM_ROOT: /app/shared/
+      IMGPROXY_BASE_URL: local:///
 
   drupal:
     build: .
