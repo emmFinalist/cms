@@ -9,22 +9,31 @@
 version: '3.5'
 
 services:
-  imgproxy:
-    image: darthsim/imgproxy
+  nginx:
+    image: nginx
+    volumes:
+      - ./data/nginx/default.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - 8080:8080
+      - 9091:80
+    depends_on:
+      - imgproxy
+      - drupal
+
+  imgproxy: # port 8080
+    image: darthsim/imgproxy
     volumes:
       - ./app/shared/sites:/app/shared/sites
+    restart: always
     environment:
       IMGPROXY_ENABLE_WEBP_DETECTION: 1
       IMGPROXY_ENFORCE_WEBP: 1
       IMGPROXY_LOCAL_FILESYSTEM_ROOT: /app/shared/
-      IMGPROXY_BASE_URL: local:///
+      IMGPROXY_BASE_URL: local:/// # only look at local files, therefore no URL signatures are needed
+    depends_on:
+      - drupal
 
-  drupal:
+  drupal: # port 80
     build: .
-    ports:
-      - 9091:80
     volumes:
       - ./app/modules:/app/modules
       - ./app/config:/app/config
@@ -40,6 +49,8 @@ services:
       DRUPAL_HASH_SALT: salt
     links:
       - elasticsearch:elastic-index.service.consul
+    depends_on:
+      - database
       
   database:
     image: amsterdam/postgres11
