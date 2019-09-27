@@ -1,7 +1,0 @@
-.cke_dialog_body textarea.cke_dialog_ui_input_textarea {
-    font-family: "Lucida Console", Monaco, monospace;
-    white-space: nowrap;
-}
-.js-quickedit-page-title page-title {
-	color: #f00;
-}
