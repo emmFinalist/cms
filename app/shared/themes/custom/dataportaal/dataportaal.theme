@@ -1,0 +1,10 @@
+<?php
+    /**
+     * Implements hook_preprocess_block().
+     */
+    function dataportaal_preprocess_node(&$variables) {
+
+      $variables['host'] = \Drupal::request()->getSchemeAndHttpHost();
+
+    }
+

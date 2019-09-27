@@ -1,0 +1,16 @@
+name: "dataportaal"
+type: theme
+description: 'Overrides for the Seven theme.'
+core: 8.x
+base theme: seven
+screenshot: logo.png
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
