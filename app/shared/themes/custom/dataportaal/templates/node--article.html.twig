@@ -88,9 +88,11 @@
   <div{{ content_attributes.addClass('content') }}>
 
     <p>Dit artikel is gepubliceerd op:</p>
+
     <p>
-    <a href="https://data.amsterdam.nl/artikelen/artikel/{{ content.field_slug.0 }}/{{ content.uuid.0 }}">https://data.amsterdam.nl/artikelen/artikel/{{ content.field_slug.0 }}/{{ content.uuid.0 }}</a>
+    <a href="{{ host }}/artikelen/artikel/{{ content.field_slug.0 }}/{{ content.uuid.0 }}">{{ host }}/artikelen/artikel/{{ content.field_slug.0 }}/{{ content.uuid.0 }}</a>
     </p>
+
   </div>
 
 </article>
