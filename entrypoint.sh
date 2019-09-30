@@ -1,5 +1,5 @@
 #!/bin/sh
-for I in profiles sites themes; do \
+for I in profiles sites; do \
   mkdir -p /app/shared/$I
 done
  

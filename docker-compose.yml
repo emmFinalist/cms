@@ -16,10 +16,10 @@ services:
       - 9091:80
     volumes:
       - ./app/modules:/app/modules
+      - ./app/themes:/app/themes
       - ./app/config:/app/config
       - ./app/shared/profiles:/app/shared/profiles
       - ./app/shared/sites:/app/shared/sites
-      - ./app/shared/themes:/app/shared/themes
     environment:
       DRUPAL_DBNAME: cms
       DRUPAL_DBHOST: database

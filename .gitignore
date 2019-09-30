@@ -2,7 +2,6 @@ appshared*
 db*
 app/shared/profiles
 app/shared/sites
-# app/shared/themes
 bak
 tmp
 data/sites/default/files
