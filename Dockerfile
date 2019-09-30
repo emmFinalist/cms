@@ -4,6 +4,7 @@ COPY data/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY data/sites /template/sites
 COPY app/modules /app/modules
 COPY app/config /app/config
+COPY app/shared/themes /app/shared/themes
 
 RUN \
   for I in profiles sites themes; do \
