@@ -4,7 +4,7 @@
      */
     function dataportaal_preprocess_node(&$variables) {
 
-      $variables['host'] = \Drupal::request()->getSchemeAndHttpHost();
+      $variables['host'] = str_replace("cms.", "", \Drupal::request()->getSchemeAndHttpHost() );
 
     }
 
