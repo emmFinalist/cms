@@ -4,7 +4,16 @@
      */
     function dataportaal_preprocess_node(&$variables) {
 
-      $variables['host'] = \Drupal::request()->getSchemeAndHttpHost();
+    	$host = \Drupal::request()->getSchemeAndHttpHost();
 
+    	if ($hostPrefix === "acc"){
+    		$host = "https://acc.data.amsterdam.nl";
+    	}
+
+    	if ($hostPrefix === "dat"){
+    		$host = "https://acc.data.amsterdam.nl";
+    	}
+
+      $variables['host'] = $host;
     }
 
