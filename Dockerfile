@@ -20,6 +20,6 @@ RUN chmod 755 /entrypoint.sh
 
 # Extra Apache configs
 COPY data/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
-RUN a2enmod proxy proxy_http
+RUN a2enmod proxy proxy_http cache_disk
 
 ENTRYPOINT [ "/entrypoint.sh"]
