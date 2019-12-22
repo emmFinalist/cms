@@ -1,4 +1,41 @@
-FROM aditudorache/drupal:8.7.7
+FROM drupal:8.8.1-apache
+
+#
+ENV COMPOSER_ALLOW_SUPERUSER 1
+
+# Set workdir
+WORKDIR /var/www/html/
+
+## Install
+RUN apt update && apt install -y git unzip
+
+# Install composer, require the elasticsearch dependencies
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && composer config --global repo.packagist composer https://packagist.org \
+    && composer --ansi --version --no-interaction
+
+# Install drupal cli
+RUN composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader \
+    && curl https://drupalconsole.com/installer -L -o drupal.phar \
+    && mv drupal.phar /usr/local/bin/drupal \
+    && chmod +x /usr/local/bin/drupal \
+    && drupal list | grep ^Drupal
+
+# Install drush cli
+RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar \
+    && mv drush.phar /usr/local/bin/drush \
+    && chmod +x /usr/local/bin/drush \
+    && composer require drush/drush \
+    && drush version
+
+# Install required module dependencies
+RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/elasticsearch_connector:^6" \
+      "nodespark/des-connector:^6" "drupal/search_api" \
+      "webonyx/graphql-php" \
+      "drupal/graphql_search_api"
+
+RUN composer info
+
 
 COPY data/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY data/sites /template/sites
