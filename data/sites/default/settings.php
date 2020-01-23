@@ -792,6 +792,7 @@ $config_directories['sync'] = '/app/config';
  
 $settings['trusted_host_patterns'] = array (
   '^localhost(.*)$',
+  '^cms.service.consul$',
   '^cms.data.amsterdam.nl$',
   '^acc.cms.data.amsterdam.nl$',
 );
