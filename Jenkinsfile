@@ -25,7 +25,7 @@ node {
     stage("Build image") {
         tryStep "build", {
             wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
-                docker.withRegistry('https://repo.data.amsterdam.nl','docker-registry') {
+                docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
                     def image = docker.build("datapunt/cms:${env.BUILD_NUMBER}")
                     image.push()
                 }
@@ -42,7 +42,7 @@ if (BRANCH == "master") {
     node {
         stage('Push acceptance image') {
             tryStep "image tagging", {
-                docker.withRegistry('https://repo.data.amsterdam.nl','docker-registry') {
+                docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
                     def image = docker.image("datapunt/cms:${env.BUILD_NUMBER}")
                     image.pull()
                     image.push("acceptance")
@@ -71,7 +71,7 @@ if (BRANCH == "master") {
     node {
         stage('Push production image') {
             tryStep "image tagging", {
-                docker.withRegistry('https://repo.data.amsterdam.nl','docker-registry') {
+                docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
                     def image = docker.image("datapunt/cms:${env.BUILD_NUMBER}")
                     image.pull()
                     image.push("production")
