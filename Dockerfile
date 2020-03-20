@@ -1,7 +1,8 @@
-FROM drupal:8.8.1-apache
+FROM drupal:8.8.4-apache
 
 #
 ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_MEMORY_LIMIT -1
 
 # Set workdir
 WORKDIR /var/www/html/
