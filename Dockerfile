@@ -15,8 +15,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     && composer config --global repo.packagist composer https://packagist.org \
     && composer --ansi --version --no-interaction
 
+RUN composer require symfony/dom-crawler:^3.4
+
 # Install drupal cli
-RUN composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader \
+RUN composer require drupal/console:~1.9.4 --prefer-dist --optimize-autoloader \
     && curl https://drupalconsole.com/installer -L -o drupal.phar \
     && mv drupal.phar /usr/local/bin/drupal \
     && chmod +x /usr/local/bin/drupal \
