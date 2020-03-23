@@ -1,10 +1,9 @@
 type: module
-# core: 8.x
+core: 8.x
 name: UUID extra
 description: Enables field widgets and formatters 
 
-# Information added by Drupal.org packaging script on 2018-09-08
-version: '8.x-1.x-dev'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2020-03-16
+version: '8.x-1.0-beta1'
 project: 'uuid_extra'
-datestamp: 1536432783
+datestamp: 1584378044
