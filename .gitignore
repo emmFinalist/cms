@@ -5,3 +5,4 @@ app/shared/sites
 bak
 tmp
 data/sites/default/files
+app/config/
