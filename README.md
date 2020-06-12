@@ -1,37 +1,35 @@
-# Drupal cms for the Amsterdam `OIS Dataportaal`
+# Drupal cms for the Amsterdam data portal
 
-This is the implementation of a headless cms for the `Dataportaal` of the Municipality of Amsterdam where articles, publications and special articles will be published and maintained.
+This is the implementation of a headless cms for the data portal of the Municipality of Amsterdam where articles, publications and other editorial content will be published and maintained.
 This is based on the Drupal cms enriched with Elasticsearch capabilities.
 
 ## Architecture
 
-The cms backend will be used by the OIS Editors to publish the editorial material. The editorial material will be made available through the headless API of Drupal and integrated in the [`Dataportaal` website](https://data.amsterdam.nl)
+The cms backend will be used by editors to publish the editorial content. The editorial content will be made available through the headless API of Drupal and integrated in the website [Data en informatie](https://data.amsterdam.nl) (the data portal).
 
 ## Development
 
 Use the docker-compose commands to spin up the development environment.
 Run for instance `docker-compose up -d` to run a detached local instance.
 
-## Installation
 
-After the website is started, this can be extended with modules. The modules that don't have a core dependency can be installed by loading in the admin panel in drupal.
-There are few modules that have to be installed from inside the container by executing drupal console launcher commands.
-These modules are elasticsearch_connector, search_api, graphql and graphql_search_api and will be described in a separate chapter
+## Configuration synchronizaton
 
-## Deployment and synchronizaton acceptance and production
-
-Synchronyze the site uuid among development, accepance(staging) and production
-Use these commands to achieve get and set the site uuid.
+To synchronyze the site uuid among development, accepance(staging) and production use these commands to get the site uuid of the production instance and set the site uuid of the local instance.
 
 ```bash
-drush config-get "system.site" uuid # 8b6c1207-98d1-45fe-89f9-6a5d6517ab52
+drush config-get "system.site" uuid # 8b6c1207-98d1-45fe-89f9-6a5d6517ab54
 drush config-set "system.site" uuid "8b6c1207-98d1-45fe-89f9-6a5d6517ab54"
 ```
 
-After the deployment, the new installed modules have to be manually installed from the extension manager or through configuration synchronization.
+Export the production configuration using the synchronization panel `/admin/config/development/configuration`
 
-For development, set in the docker-compose the `DRUPAL_HASH_SALT` environment variable to the generated value from the build pipeline.
-Export and import the configuration with the synchronization panel `/admin/config/development/configuration`
+## Update or install modules
+
+Drupal modules can be updte or installed by adding them to `/app/modules`.
+
+After deployment, newly installed modules have to be manually activated from the extension manager.
+
 
 ## Overview of the installed modules
 
@@ -117,7 +115,7 @@ This workflow can be used for both updating/upgrading of a module or changing th
  docker-compose up -d
 ```
 
-- Make the requested changes and test that it works. This step can be a local change or an import of the exported acceptance configuration
+- Make the requested changes and test that it works.
 - The changes should be reflected in one of the `./app` directories
 - Checkin the changes
 - Run the Jenkins pipeline
