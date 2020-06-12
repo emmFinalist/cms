@@ -22,6 +22,12 @@ drush config-get "system.site" uuid # 8b6c1207-98d1-45fe-89f9-6a5d6517ab54
 drush config-set "system.site" uuid "8b6c1207-98d1-45fe-89f9-6a5d6517ab54"
 ```
 
+When executing from the docker host machine:
+
+```bash
+docker exec -it cms_drupal_1 drush config-set "system.site" uuid "8b6c1207-98d1-45fe-89f9-6a5d6517ab54"
+```
+
 Export the production configuration using the synchronization panel `/admin/config/development/configuration`
 
 ## Update or install modules
