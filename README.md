@@ -41,83 +41,11 @@ When new modules are installed Drupal will ask for a database update. If needed 
 
 ## Overview of the installed modules
 
-This list is generated from an runing version of Drupal with
+For an overview of all enabled modules in a running instance of Drupal use
 
 ```bash
  drush pm-list --type=Module --status=enabled
 ```
-
-Update this list each time a module is installed/updated
-
- ---------------- ----------------------------------------------------------- --------- ----------------
-  Package          Name                                                        Status    Version
- ---------------- ----------------------------------------------------------- --------- ----------------
-  Core             Automated Cron (automated_cron)                             Enabled   8.9.0
-  Core             BigPipe (big_pipe)                                          Enabled   8.9.0
-  Core             Block (block)                                               Enabled   8.9.0
-  Core             Custom Block (block_content)                                Enabled   8.9.0
-  Core             Breakpoint (breakpoint)                                     Enabled   8.9.0
-  Core             CKEditor (ckeditor)                                         Enabled   8.9.0
-  Core             Color (color)                                               Enabled   8.9.0
-  Core             Comment (comment)                                           Enabled   8.9.0
-  Core             Configuration Manager (config)                              Enabled   8.9.0
-  Core             Contact (contact)                                           Enabled   8.9.0
-  Core             Contextual Links (contextual)                               Enabled   8.9.0
-  Field types      Datetime (datetime)                                         Enabled   8.9.0
-  Core             Database Logging (dblog)                                    Enabled   8.9.0
-  Core             Internal Dynamic Page Cache (dynamic_page_cache)            Enabled   8.9.0
-  Core             Text Editor (editor)                                        Enabled   8.9.0
-  Core             Field (field)                                               Enabled   8.9.0
-  Core             Field UI (field_ui)                                         Enabled   8.9.0
-  Field types      File (file)                                                 Enabled   8.9.0
-  Core             Filter (filter)                                             Enabled   8.9.0
-  Core             Help (help)                                                 Enabled   8.9.0
-  Core             History (history)                                           Enabled   8.9.0
-  Field types      Image (image)                                               Enabled   8.9.0
-  Web services     JSON:API (jsonapi)                                          Enabled   8.9.0
-  Field types      Link (link)                                                 Enabled   8.9.0
-  Core             Media (media)                                               Enabled   8.9.0
-  Core             Media Library (media_library)                               Enabled   8.9.0
-  Core             Custom Menu Links (menu_link_content)                       Enabled   8.9.0
-  Core             Menu UI (menu_ui)                                           Enabled   8.9.0
-  Core             Node (node)                                                 Enabled   8.9.0
-  Field types      Options (options)                                           Enabled   8.9.0
-  Core             Internal Page Cache (page_cache)                            Enabled   8.9.0
-  Core             Path (path)                                                 Enabled   8.9.0
-  Core             Path alias (path_alias)                                     Enabled   8.9.0
-  Core             Quick Edit (quickedit)                                      Enabled   8.9.0
-  Core             RDF (rdf)                                                   Enabled   8.9.0
-  Web services     RESTful Web Services (rest)                                 Enabled   8.9.0
-  Core             Search (search)                                             Enabled   8.9.0
-  Web services     Serialization (serialization)                               Enabled   8.9.0
-  Core             Shortcut (shortcut)                                         Enabled   8.9.0
-  Core             System (system)                                             Enabled   8.9.0
-  Core             Taxonomy (taxonomy)                                         Enabled   8.9.0
-  Field types      Text (text)                                                 Enabled   8.9.0
-  Core             Toolbar (toolbar)                                           Enabled   8.9.0
-  Core             Tour (tour)                                                 Enabled   8.9.0
-  Core             Update Manager (update)                                     Enabled   8.9.0
-  Core             User (user)                                                 Enabled   8.9.0
-  Core             Views (views)                                               Enabled   8.9.0
-  Core             Views UI (views_ui)                                         Enabled   8.9.0
-  Other            Backup and Migrate (backup_migrate)                         Enabled   8.x-4.1
-  Other            Configuration Update Base (config_update)                   Enabled   8.x-1.7
-  Web services     Consumer Image Styles (consumer_image_styles)               Enabled   8.x-3.0
-  Authentication   Consumers (consumers)                                       Enabled   8.x-1.11
-  Elasticsearch    Elasticsearch Connector (elasticsearch_connector)           Enabled   8.x-6.0-alpha2
-  Other            Entity Count (entity_count)                                 Enabled   8.x-1.0
-  Field types      Entity Reference Revisions (entity_reference_revisions)     Enabled   8.x-1.8
-  Feeds            Feeds (feeds)                                               Enabled   8.x-3.0-alpha8
-  Media            Imce File Manager (imce)                                    Enabled   8.x-1.8
-  Web services     JSON:API Extras (jsonapi_extras)                            Enabled   8.x-3.14
-  Web services     JSON API Defaults (jsonapi_defaults)                        Enabled   8.x-3.14
-  Paragraphs       Paragraphs Type Permissions (paragraphs_type_permissions)   Enabled   8.x-1.12
-  Paragraphs       Paragraphs (paragraphs)                                     Enabled   8.x-1.12
-  Other            REST Absolute URLs (rest_absolute_urls)                     Enabled   8.x-1.0-beta1
-  Search           Search API (search_api)                                     Enabled   8.x-1.17
-  Other            Typed Data (typed_data)                                     Enabled   8.x-1.0-alpha5
-  Other            UUID extra (uuid_extra)                                     Enabled   8.x-1.0-beta1
- ---------------- ----------------------------------------------------------- --------- ----------------
 
 ## Update procedure
 
