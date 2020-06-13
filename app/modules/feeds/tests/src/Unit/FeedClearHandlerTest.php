@@ -6,6 +6,7 @@ use Drupal\feeds\Event\FeedsEvents;
 use Drupal\feeds\FeedClearHandler;
 use Drupal\feeds\State;
 use Drupal\feeds\StateInterface;
+use Exception;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 /**
@@ -48,7 +49,7 @@ class FeedClearHandlerTest extends FeedsUnitTestCase {
 
     $state = new State();
 
-    $this->feed = $this->getMock('Drupal\feeds\FeedInterface');
+    $this->feed = $this->createMock('Drupal\feeds\FeedInterface');
     $this->feed->expects($this->any())
       ->method('getState')
       ->with(StateInterface::CLEAR)
@@ -83,7 +84,6 @@ class FeedClearHandlerTest extends FeedsUnitTestCase {
 
   /**
    * @covers ::clear
-   * @expectedException \Exception
    */
   public function testException() {
     $this->dispatcher->addListener(FeedsEvents::CLEAR, function ($event) {
@@ -93,6 +93,7 @@ class FeedClearHandlerTest extends FeedsUnitTestCase {
     $this->feed->expects($this->once())
       ->method('unlock');
 
+    $this->expectException(Exception::class);
     $this->handler->clear($this->feed, $this->context);
   }
 

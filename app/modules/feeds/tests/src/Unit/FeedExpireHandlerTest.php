@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\feeds\Unit;
 
+use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\feeds\Event\FeedsEvents;
 use Drupal\feeds\FeedExpireHandler;
@@ -44,9 +45,13 @@ class FeedExpireHandlerTest extends FeedsUnitTestCase {
     parent::setUp();
 
     $this->dispatcher = new EventDispatcher();
-    $this->feed = $this->getMock(FeedInterface::class);
-    $this->handler = $this->getMock(FeedExpireHandler::class, ['getExpiredIds'], [$this->dispatcher]);
-    $this->handler->setStringTranslation($this->getMock(TranslationInterface::class));
+    $this->feed = $this->createMock(FeedInterface::class);
+    $this->handler = $this->getMockBuilder(FeedExpireHandler::class)
+      ->setMethods(['getExpiredIds'])
+      ->setConstructorArgs([$this->dispatcher])
+      ->getMock();
+    $this->handler->setStringTranslation($this->createMock(TranslationInterface::class));
+    $this->handler->setMessenger($this->createMock(MessengerInterface::class));
   }
 
   /**
@@ -91,7 +96,7 @@ class FeedExpireHandlerTest extends FeedsUnitTestCase {
       ->expects($this->once())
       ->method('clearStates');
 
-    $this->setExpectedException(Exception::class);
+    $this->expectException(Exception::class);
     $this->handler->expireItem($this->feed, 1);
   }
 
