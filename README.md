@@ -18,14 +18,14 @@ Run for instance `docker-compose up -d` to run a detached local instance.
 To synchronyze the site uuid among development, accepance(staging) and production use these commands to get the site uuid of the production instance and set the site uuid of the local instance.
 
 ```bash
-drush config-get "system.site" uuid # 8b6c1207-98d1-45fe-89f9-6a5d6517ab54
-drush config-set "system.site" uuid "8b6c1207-98d1-45fe-89f9-6a5d6517ab54"
+drush config-get "system.site" uuid
+drush config-set "system.site" uuid [uuid]
 ```
 
 When executing from the docker host machine:
 
 ```bash
-docker exec -it cms_drupal_1 drush config-set "system.site" uuid "8b6c1207-98d1-45fe-89f9-6a5d6517ab54"
+docker exec -it cms_drupal_1 drush config-set "system.site" uuid [uuid]
 ```
 
 Export the production configuration using the synchronization panel `/admin/config/development/configuration`
