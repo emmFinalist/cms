@@ -13,7 +13,7 @@ Use the docker-compose commands to spin up the development environment.
 Run for instance `docker-compose up -d` to run a detached local instance.
 
 
-## Configuration synchronizaton
+## Configuration synchronization
 
 To synchronyze the site uuid among development, accepance(staging) and production use these commands to get the site uuid of the production instance and set the site uuid of the local instance.
 
