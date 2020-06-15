@@ -2,9 +2,11 @@
 
 namespace Drupal\feeds;
 
-use Drupal\Core\Entity\EntityHandlerBase;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\EntityHandlerInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Messenger\MessengerTrait;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\feeds\Event\EventDispatcherTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -12,11 +14,15 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 /**
  * Provides a base class for entity handlers.
  */
-abstract class FeedHandlerBase extends EntityHandlerBase implements EntityHandlerInterface {
+abstract class FeedHandlerBase implements EntityHandlerInterface {
+
+  use DependencySerializationTrait;
   use EventDispatcherTrait;
+  use MessengerTrait;
+  use StringTranslationTrait;
 
   /**
-   * Constructs a FeedHandlerBase object.
+   * Constructs a new FeedHandlerBase object.
    *
    * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $event_dispatcher
    *   The event dispatcher.

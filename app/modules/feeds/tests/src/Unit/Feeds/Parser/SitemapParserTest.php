@@ -2,10 +2,12 @@
 
 namespace Drupal\Tests\feeds\Unit\Feeds\Parser;
 
+use Drupal\feeds\Exception\EmptyFeedException;
 use Drupal\feeds\Feeds\Parser\SitemapParser;
 use Drupal\feeds\Result\RawFetcherResult;
 use Drupal\feeds\State;
 use Drupal\Tests\feeds\Unit\FeedsUnitTestCase;
+use Exception;
 
 /**
  * @coversDefaultClass \Drupal\feeds\Feeds\Parser\SitemapParser
@@ -47,14 +49,14 @@ class SitemapParserTest extends FeedsUnitTestCase {
   public function setUp() {
     parent::setUp();
 
-    $this->feedType = $this->getMock('Drupal\feeds\FeedTypeInterface');
+    $this->feedType = $this->createMock('Drupal\feeds\FeedTypeInterface');
     $configuration = ['feed_type' => $this->feedType];
     $this->parser = new SitemapParser($configuration, 'sitemap', []);
     $this->parser->setStringTranslation($this->getStringTranslationStub());
 
     $this->state = new State();
 
-    $this->feed = $this->getMock('Drupal\feeds\FeedInterface');
+    $this->feed = $this->createMock('Drupal\feeds\FeedInterface');
     $this->feed->expects($this->any())
       ->method('getType')
       ->will($this->returnValue($this->feedType));
@@ -79,10 +81,11 @@ class SitemapParserTest extends FeedsUnitTestCase {
    * Tests parsing an invalid feed.
    *
    * @covers ::parse
-   * @expectedException \Exception
    */
   public function testInvalidFeed() {
     $fetcher_result = new RawFetcherResult('beep boop', $this->getMockFileSystem());
+
+    $this->expectException(Exception::class);
     $result = $this->parser->parse($this->feed, $fetcher_result, $this->state);
   }
 
@@ -90,10 +93,11 @@ class SitemapParserTest extends FeedsUnitTestCase {
    * Tests parsing an empty feed.
    *
    * @covers ::parse
-   * @expectedException \Drupal\feeds\Exception\EmptyFeedException
    */
   public function testEmptyFeed() {
     $result = new RawFetcherResult('', $this->getMockFileSystem());
+
+    $this->expectException(EmptyFeedException::class);
     $this->parser->parse($this->feed, $result, $this->state);
   }
 

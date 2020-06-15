@@ -22,7 +22,7 @@ class CsvParserFeedFormTest extends FeedsUnitTestCase {
    * @covers ::submitConfigurationForm
    */
   public function testFeedForm() {
-    $plugin = $this->getMock(FeedsPluginInterface::class);
+    $plugin = $this->createMock(FeedsPluginInterface::class);
 
     $feed = $this->prophesize(FeedInterface::class);
     $feed->getConfigurationFor($plugin)
@@ -37,7 +37,7 @@ class CsvParserFeedFormTest extends FeedsUnitTestCase {
     $form_state = new FormState();
 
     $form = $form_object->buildConfigurationForm([], $form_state, $feed->reveal());
-    $this->assertInternalType('array', $form);
+    $this->assertTrue(is_array($form));
 
     $form_state->setValues(['delimiter' => ';', 'no_headers' => TRUE]);
 
