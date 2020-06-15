@@ -38,6 +38,8 @@ After deployment, newly installed modules may have to be manually activated from
 
 When new modules are installed Drupal will ask for a database update. If needed the update can be manually initiated by navigating to `/update.php`.
 
+When all modules are activated and the database is updated, the content can be re-indexed for Elastic Search using `/admin/config/search/search-api`.
+
 
 ## Overview of the installed modules
 
