@@ -1,4 +1,4 @@
-FROM drupal:8.9.1-apache
+FROM drupal:8.9.2-apache
 
 #
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -31,8 +31,8 @@ RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0
     && drush version
 
 # Install required module dependencies
-RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/elasticsearch_connector:^6" \
-      "nodespark/des-connector:^6" "drupal/search_api" \
+RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/elasticsearch_connector:^7" \
+      "nodespark/des-connector:^7" "drupal/search_api" \
       "webonyx/graphql-php" \
       "drupal/graphql_search_api"
 
