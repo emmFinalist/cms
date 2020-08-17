@@ -21,8 +21,7 @@ RUN composer require symfony/dom-crawler:^3.4
 RUN composer require drupal/console:~1.9.4 --prefer-dist --optimize-autoloader \
     && curl https://drupalconsole.com/installer -L -o drupal.phar \
     && mv drupal.phar /usr/local/bin/drupal \
-    && chmod +x /usr/local/bin/drupal \
-    && drupal list | grep ^Drupal
+    && chmod +x /usr/local/bin/drupal
 
 # Install drush cli
 RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar \
