@@ -15,7 +15,7 @@ build: ## build Docker Compose images
 	docker-compose build
 
 start: ## start single Docker Compose service in detached mode
-	docker-compose up --force-recreate -d
+	docker-compose up -d
 
 stop: ## stop Docker Compose
 	docker-compose down --remove-orphans
