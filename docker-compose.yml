@@ -9,7 +9,9 @@
 version: '3.5'
 
 services:
-  imgproxy: # port 8080
+  imgproxy:
+    ports:
+      - 9091:8080
     image: darthsim/imgproxy
     volumes:
       - ./app/shared/sites:/app/shared/sites
@@ -23,10 +25,10 @@ services:
       IMGPROXY_LOCAL_FILESYSTEM_ROOT: /app/shared/
       IMGPROXY_BASE_URL: local:/// # only look at local files, therefore no URL signatures are needed
 
-  drupal: # port 80
+  drupal:
     build: .
     ports:
-      - 9091:80
+      - 80:80
     volumes:
       - ./app/modules:/app/modules
       - ./app/themes:/app/themes
@@ -46,7 +48,7 @@ services:
     depends_on:
       - database
       - imgproxy
-      
+
   database:
     image: amsterdam/postgres11
     ports:
@@ -66,4 +68,4 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
-      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"      
+      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"

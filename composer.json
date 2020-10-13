@@ -1,0 +1,18 @@
+{
+  "name": "amsterdam/cms",
+	"minimum-stability": "dev",
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/console": "^1.9.5",
+    "drush/drush": "^10.3.5",
+    "drupal/elasticsearch_connector": "^7.0@alpha",
+    "nodespark/des-connector": "7.x-dev",
+    "webonyx/graphql-php": "v14.3.0",
+    "drupal/graphql_search_api": "1.x-dev"
+  }
+}
