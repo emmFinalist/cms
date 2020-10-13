@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98925d9d8e1b524a57e23e537e2c3605",
+    "content-hash": "b122dc285768ccc792990f5e60f5f7fd",
     "packages": [
         {
             "name": "alchemy/resource-component",
@@ -2234,6 +2234,116 @@
             "time": "2020-06-20T13:08:34+00:00"
         },
         {
+            "name": "drupal/backup_migrate",
+            "version": "dev-5.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/backup_migrate.git",
+                "reference": "181c8cd7127f8b8dea374e738e0ef085d344b084"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "suggest": {
+                "defuse/php-encryption": "Optional encryption of saved backups."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-5.0.x": "5.0.x-dev"
+                },
+                "drupal": {
+                    "version": "5.0.0-rc2+0-dev",
+                    "datestamp": "1601316366",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/189065/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
+                    "name": "dgorton",
+                    "homepage": "https://www.drupal.org/user/19044"
+                },
+                {
+                    "name": "ikit-claw",
+                    "homepage": "https://www.drupal.org/user/3285813"
+                },
+                {
+                    "name": "ronan",
+                    "homepage": "https://www.drupal.org/user/72815"
+                }
+            ],
+            "description": "Backup and Migrate Drupal Module",
+            "homepage": "https://www.drupal.org/project/backup_migrate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/backup_migrate",
+                "issues": "https://www.drupal.org/project/issues/backup_migrate",
+                "slack": "https://drupal.slack.com/messages/C7C4M4QJV/details/"
+            },
+            "time": "2020-09-28T18:05:24+00:00"
+        },
+        {
+            "name": "drupal/config_update",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_update.git",
+                "reference": "b286ac9e5e564f8b91fa4e945ab56c80ef580f52"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6+5-dev",
+                    "datestamp": "1586352965",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jhodgdon",
+                    "homepage": "https://www.drupal.org/user/155601"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                }
+            ],
+            "description": "Provides basic revert and update functionality for other modules",
+            "homepage": "https://www.drupal.org/project/config_update",
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_update"
+            },
+            "time": "2020-04-08T13:35:24+00:00"
+        },
+        {
             "name": "drupal/console",
             "version": "1.9.5",
             "source": {
@@ -2497,6 +2607,97 @@
             "time": "2020-08-15T04:57:23+00:00"
         },
         {
+            "name": "drupal/consumer_image_styles",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/consumer_image_styles.git",
+                "reference": "42dc67f66f5b18d538e4036f8ced22b57c3800fe"
+            },
+            "require": {
+                "drupal/consumers": "^1.2",
+                "drupal/core": "^8",
+                "drupal/jsonapi_extras": "^3.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0+0-dev",
+                    "datestamp": "1565733784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "homepage": "https://www.drupal.org/user/550110",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                }
+            ],
+            "description": "Consumer Image Styles integrates with JSON API to provide image styles to your images in your decoupled project.",
+            "homepage": "https://www.drupal.org/project/consumer_image_styles",
+            "support": {
+                "source": "https://git.drupalcode.org/project/consumer_image_styles"
+            },
+            "time": "2019-08-13T22:00:29+00:00"
+        },
+        {
+            "name": "drupal/consumers",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/consumers.git",
+                "reference": "6fcd83318a995f3720b6bdac16739e9aa3f658bc"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.10+4-dev",
+                    "datestamp": "1585605682",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "eojthebrave",
+                    "homepage": "https://www.drupal.org/user/79230"
+                }
+            ],
+            "description": "Declare all the consumers of your API",
+            "homepage": "https://www.drupal.org/project/consumers",
+            "support": {
+                "source": "https://git.drupalcode.org/project/consumers"
+            },
+            "time": "2020-03-30T22:01:01+00:00"
+        },
+        {
             "name": "drupal/core",
             "version": "8.9.x-dev",
             "source": {
@@ -2728,6 +2929,203 @@
             "time": "2020-10-12T06:57:34+00:00"
         },
         {
+            "name": "drupal/devel",
+            "version": "dev-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel.git",
+                "reference": "b38337acfc47a3b208c46c98b8d9d219779f98fb"
+            },
+            "require": {
+                "doctrine/common": "^2.7",
+                "drupal/core": "^8.8 || ^9",
+                "symfony/var-dumper": "^4 || ^5"
+            },
+            "conflict": {
+                "kint-php/kint": "<3"
+            },
+            "require-dev": {
+                "composer/installers": "^1",
+                "cweagans/composer-patches": "~1.0",
+                "drupal/core-composer-scaffold": "^8.0",
+                "drupal/core-dev": "^8.0",
+                "drupal/core-recommended": "^8.0",
+                "drush/drush": "^10",
+                "mglaman/phpstan-drupal": "^0.12",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/phpstan-deprecation-rules": "^0.12",
+                "zaporylie/composer-drupal-optimizations": "^1.0"
+            },
+            "suggest": {
+                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "4.x-dev",
+                    "datestamp": "1597578440",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "installer-paths": {
+                    "web/core": [
+                        "type:drupal-core"
+                    ],
+                    "web/libraries/{$name}": [
+                        "type:drupal-library"
+                    ],
+                    "web/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "web/profiles/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "web/themes/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "drupal-scaffold": {
+                    "locations": {
+                        "web-root": "web/"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    ".spoons/ScriptHandler.php"
+                ]
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "si": [
+                    "drush si -v --db-url=${SIMPLETEST_DB:-mysql://root:password@mariadb/db}"
+                ],
+                "phpcs": [
+                    "phpcs --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 web/modules/custom"
+                ],
+                "lint": [
+                    "parallel-lint --exclude web --exclude vendor ."
+                ],
+                "webserver": [
+                    "cd web && php -S 0.0.0.0:8888 .ht.router.php"
+                ],
+                "chromedriver": [
+                    "chromedriver --port=9515 --verbose --whitelisted-ips --log-path=/tmp/chromedriver.log --no-sandbox"
+                ],
+                "unit": [
+                    "phpunit --verbose web/modules/custom"
+                ],
+                "phpstan": [
+                    "phpstan analyse web/modules/custom"
+                ],
+                "stylelint": [
+                    "yarn --silent --cwd web/core stylelint --formatter verbose --config ./.stylelintrc.json ../modules/custom/**/*.css"
+                ],
+                "eslint": [
+                    "yarn --silent --cwd web/core eslint -c ./.eslintrc.json ../modules/custom"
+                ],
+                "post-update-cmd": [
+                    "Spoons\\ScriptHandler::createSymlinks"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drupalspoons",
+                    "homepage": "https://www.drupal.org/user/3647684"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "https://www.drupal.org/project/devel",
+            "support": {
+                "source": "https://gitlab.com/drupalspoons/devel",
+                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
+                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            },
+            "time": "2020-08-16T11:29:57+00:00"
+        },
+        {
+            "name": "drupal/devel_entity_updates",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel_entity_updates.git",
+                "reference": "fa6e30acfc5cb944537264285d9d6088aaae543f"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/devel": "*"
+            },
+            "conflict": {
+                "drupal/core": "<8.7",
+                "drush/drush": ">=9.0 <9.6"
+            },
+            "require-dev": {
+                "drupal/devel": "^2 || ^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "3.x-dev",
+                    "datestamp": "1586214315",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Francesco Placella (plach)",
+                    "homepage": "https://www.drupal.org/u/plach",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "plach",
+                    "homepage": "https://www.drupal.org/user/183211"
+                }
+            ],
+            "description": "Provides developers an API and drush command to perform automatic entity updates.",
+            "homepage": "http://drupal.org/project/devel_entity_updates",
+            "support": {
+                "source": "https://cgit.drupalcode.org/devel_entity_updates",
+                "issues": "https://drupal.org/project/issues/devel_entity_updates",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            },
+            "time": "2020-04-06T22:44:36+00:00"
+        },
+        {
             "name": "drupal/elasticsearch_connector",
             "version": "7.0.0-alpha2",
             "source": {
@@ -2792,6 +3190,262 @@
                 "source": "https://github.com/nodespark/elasticsearch_connector",
                 "issues": "https://www.drupal.org/project/issues/elasticsearch_connector"
             }
+        },
+        {
+            "name": "drupal/entity_count",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_count.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_count-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "3c646efd71ce88a729cbb4efe33f40dbbf9268b7"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1545922684",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "luisortizramos",
+                    "homepage": "https://www.drupal.org/user/347601"
+                }
+            ],
+            "description": "Builds reports with the number of entities.",
+            "homepage": "https://www.drupal.org/project/entity_count",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_count"
+            }
+        },
+        {
+            "name": "drupal/entity_reference_revisions",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
+                "reference": "33c2b20517b9e122ae209542ce65460600b4ead7"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "drupal/diff": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.8+1-dev",
+                    "datestamp": "1595882741",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Entity Reference Revisions",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
+            },
+            "time": "2020-07-27T20:45:17+00:00"
+        },
+        {
+            "name": "drupal/entity_update",
+            "version": "dev-2.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_update.git",
+                "reference": "0847ac6d7026a70f1e8f199e21d765aeac340274"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev",
+                    "dev-master": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.0-rc2+3-dev",
+                    "datestamp": "1596359491",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Nuwantha",
+                    "homepage": "https://www.drupal8.ovh",
+                    "role": "Admin"
+                },
+                {
+                    "name": "iwsp",
+                    "homepage": "https://www.drupal.org/user/3514484"
+                }
+            ],
+            "description": "Update Drupal 8/9 Entity schema.",
+            "homepage": "https://www.drupal.org/project/entity_update",
+            "support": {
+                "source": "http://git.drupal.org/project/entity_update.git",
+                "issues": "https://www.drupal.org/project/issues/entity_update"
+            },
+            "time": "2020-08-02T09:11:08+00:00"
+        },
+        {
+            "name": "drupal/feeds",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/feeds.git",
+                "reference": "a0f3a950dd7bfe9dc301549efbbbf4417e0784a4"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/pathauto": "^1.8",
+                "drush/drush": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.x-dev",
+                    "datestamp": "1601563498",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Ian Ward",
+                    "homepage": "https://www.drupal.org/user/4736"
+                },
+                {
+                    "name": "MegaChriz",
+                    "homepage": "https://www.drupal.org/user/654114"
+                },
+                {
+                    "name": "Will White",
+                    "homepage": "https://www.drupal.org/user/32237"
+                },
+                {
+                    "name": "alex_b",
+                    "homepage": "https://www.drupal.org/user/53995"
+                },
+                {
+                    "name": "e2thex",
+                    "homepage": "https://www.drupal.org/user/189123"
+                },
+                {
+                    "name": "febbraro",
+                    "homepage": "https://www.drupal.org/user/43670"
+                },
+                {
+                    "name": "franz",
+                    "homepage": "https://www.drupal.org/user/581844"
+                },
+                {
+                    "name": "jmiccolis",
+                    "homepage": "https://www.drupal.org/user/31731"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "kking",
+                    "homepage": "https://www.drupal.org/user/24399"
+                },
+                {
+                    "name": "tobby",
+                    "homepage": "https://www.drupal.org/user/154797"
+                },
+                {
+                    "name": "tristanoneil",
+                    "homepage": "https://www.drupal.org/user/340659"
+                },
+                {
+                    "name": "twistor",
+                    "homepage": "https://www.drupal.org/user/473738"
+                },
+                {
+                    "name": "yhahn",
+                    "homepage": "https://www.drupal.org/user/264833"
+                }
+            ],
+            "description": "Aggregates RSS/Atom/RDF feeds, imports CSV files and more.",
+            "homepage": "https://www.drupal.org/project/feeds",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/feeds",
+                "issues": "https://www.drupal.org/project/issues/feeds"
+            },
+            "time": "2020-10-01T15:03:19+00:00"
         },
         {
             "name": "drupal/graphql",
@@ -2903,6 +3557,237 @@
             "time": "2020-08-26T06:55:36+00:00"
         },
         {
+            "name": "drupal/imce",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imce.git",
+                "reference": "d4de6e66fb84b9f393a0e492a60781ac234f2a2b"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.3+85-dev",
+                    "datestamp": "1600340663",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2841111/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "ufku",
+                    "homepage": "https://www.drupal.org/user/9910"
+                }
+            ],
+            "description": "Provides a file manager supporting personal folders.",
+            "homepage": "https://drupal.org/project/imce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imce",
+                "issues": "https://www.drupal.org/project/issues/imce?version=8.x"
+            },
+            "time": "2020-09-29T20:13:14+00:00"
+        },
+        {
+            "name": "drupal/jsonapi_extras",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_extras.git",
+                "reference": "4cd2be003580c7a059ff214d9066f3d060a97bc8"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/jsonapi": "*",
+                "e0ipso/shaper": "^1"
+            },
+            "require-dev": {
+                "drupal/jsonapi": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.15+7-dev",
+                    "datestamp": "1598170450",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "homepage": "https://www.drupal.org/user/3366066",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                },
+                {
+                    "name": "Martin Kolar",
+                    "homepage": "https://www.drupal.org/u/mkolar"
+                },
+                {
+                    "name": "Karel Majzlik",
+                    "homepage": "https://www.drupal.org/u/karlos007"
+                },
+                {
+                    "name": "Björn Brala",
+                    "homepage": "https://www.drupal.org/u/bbrala"
+                }
+            ],
+            "description": "JSON:API Extras provides a means to override and provide limited configurations to the default zero-configuration implementation provided by the JSON:API module.",
+            "homepage": "https://www.drupal.org/project/jsonapi_extras",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_extras"
+            },
+            "time": "2020-08-23T08:13:42+00:00"
+        },
+        {
+            "name": "drupal/paragraphs",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs.git",
+                "reference": "2223a6f22be1fbaca767812506b2593830473b76"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/entity_reference_revisions": "~1.3"
+            },
+            "require-dev": {
+                "drupal/block_field": "~1.0",
+                "drupal/ctools": "3.x-dev",
+                "drupal/diff": "~1.0",
+                "drupal/entity_browser": "2.x-dev",
+                "drupal/entity_usage": "2.x-dev",
+                "drupal/field_group": "3.x-dev",
+                "drupal/inline_entity_form": "~1.0",
+                "drupal/paragraphs-paragraphs_library": "*",
+                "drupal/replicate": "~1.0",
+                "drupal/search_api": "~1.0",
+                "drupal/search_api_db": "*"
+            },
+            "suggest": {
+                "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.12+11-dev",
+                    "datestamp": "1598442625",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Enables the creation of Paragraphs entities.",
+            "homepage": "https://www.drupal.org/project/paragraphs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs"
+            },
+            "time": "2020-08-26T11:50:01+00:00"
+        },
+        {
+            "name": "drupal/rest_absolute_urls",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rest_absolute_urls.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rest_absolute_urls-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "09eb0ae6038e2e605aec30d494143e6040b5a2ba"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1502800443",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Spleshka",
+                    "homepage": "https://www.drupal.org/user/810676"
+                }
+            ],
+            "description": "Replaces relative URLs with absolute URLs for all content exposed via any REST service.",
+            "homepage": "https://www.drupal.org/project/rest_absolute_urls",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rest_absolute_urls"
+            }
+        },
+        {
             "name": "drupal/search_api",
             "version": "dev-1.x",
             "source": {
@@ -2971,6 +3856,104 @@
                 "irc": "irc://irc.freenode.org/drupal-search-api"
             },
             "time": "2020-10-04T16:16:33+00:00"
+        },
+        {
+            "name": "drupal/typed_data",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/typed_data.git",
+                "reference": "66ddeadd42b42df9587c45ca634741fccfae2d54"
+            },
+            "require": {
+                "drupal/core": "^8.8.2 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha5+21-dev",
+                    "datestamp": "1600719315",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                }
+            ],
+            "description": "Extends the core Typed Data API with new APIs and features.",
+            "homepage": "https://www.drupal.org/project/typed_data",
+            "support": {
+                "source": "https://git.drupalcode.org/project/typed_data",
+                "issues": "https://www.drupal.org/project/issues/typed_data"
+            },
+            "time": "2020-09-21T20:14:46+00:00"
+        },
+        {
+            "name": "drupal/uuid_extra",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/uuid_extra.git",
+                "reference": "088aea44e8e6e920d8154cb9ad8ac6105082d365"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "2.x-dev",
+                    "datestamp": "1600366331",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                }
+            ],
+            "description": "Enables field widgets and formatters",
+            "homepage": "https://www.drupal.org/project/uuid_extra",
+            "support": {
+                "source": "https://git.drupalcode.org/project/uuid_extra"
+            },
+            "time": "2020-09-17T17:49:29+00:00"
         },
         {
             "name": "drush/drush",
@@ -3105,6 +4088,48 @@
                 }
             ],
             "time": "2020-10-12T15:42:10+00:00"
+        },
+        {
+            "name": "e0ipso/shaper",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/e0ipso/shaper.git",
+                "reference": "04e17ee682d1a66726378d7d2c2a9a9b4d6984eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/e0ipso/shaper/zipball/04e17ee682d1a66726378d7d2c2a9a9b4d6984eb",
+                "reference": "04e17ee682d1a66726378d7d2c2a9a9b4d6984eb",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "^5.2"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpcov": "^5.0",
+                "phpunit/phpunit": "^7.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shaper\\": "src",
+                    "Shaper\\Tests\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                }
+            ],
+            "description": "Lightweight library to handle in and out transformations in PHP.",
+            "time": "2019-07-27T10:13:44+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -3698,6 +4723,72 @@
                 "url"
             ],
             "time": "2020-09-30T07:37:11+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "5.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2020-05-27T16:41:55+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -7679,7 +8770,23 @@
     "stability-flags": {
         "drupal/elasticsearch_connector": 15,
         "nodespark/des-connector": 20,
-        "drupal/graphql_search_api": 20
+        "drupal/graphql_search_api": 20,
+        "drupal/backup_migrate": 20,
+        "drupal/config_update": 20,
+        "drupal/consumer_image_styles": 20,
+        "drupal/consumers": 20,
+        "drupal/devel": 20,
+        "drupal/devel_entity_updates": 20,
+        "drupal/entity_reference_revisions": 20,
+        "drupal/entity_update": 20,
+        "drupal/feeds": 20,
+        "drupal/imce": 20,
+        "drupal/jsonapi_extras": 20,
+        "drupal/paragraphs": 20,
+        "drupal/rest_absolute_urls": 10,
+        "drupal/search_api": 20,
+        "drupal/typed_data": 20,
+        "drupal/uuid_extra": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -1,6 +1,6 @@
 {
   "name": "amsterdam/cms",
-	"minimum-stability": "dev",
+  "minimum-stability": "dev",
   "repositories": {
     "drupal": {
       "type": "composer",
@@ -8,11 +8,27 @@
     }
   },
   "require": {
+    "drupal/backup_migrate": "5.0.x-dev",
+    "drupal/config_update": "1.x-dev",
     "drupal/console": "^1.9.5",
-    "drush/drush": "^10.3.5",
+    "drupal/consumer_image_styles": "3.x-dev",
+    "drupal/consumers": "1.x-dev",
+    "drupal/devel_entity_updates": "3.x-dev",
+    "drupal/devel": "4.x-dev",
     "drupal/elasticsearch_connector": "^7.0@alpha",
+    "drupal/entity_count": "^1.0",
+    "drupal/entity_reference_revisions": "1.x-dev",
+    "drupal/entity_update": "2.0.x-dev",
+    "drupal/feeds": "3.x-dev",
+    "drupal/graphql_search_api": "1.x-dev",
+    "drupal/imce": "2.x-dev",
+    "drupal/jsonapi_extras": "3.x-dev",
+    "drupal/paragraphs": "1.x-dev",
+    "drupal/rest_absolute_urls": "^1.0@beta",
+    "drupal/search_api": "1.x-dev",
+    "drupal/typed_data": "1.x-dev",
+    "drupal/uuid_extra": "2.x-dev",
     "nodespark/des-connector": "7.x-dev",
-    "webonyx/graphql-php": "v14.3.0",
-    "drupal/graphql_search_api": "1.x-dev"
+    "webonyx/graphql-php": "v14.3.0"
   }
 }
