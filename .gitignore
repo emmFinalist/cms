@@ -6,5 +6,6 @@ app/shared/*
 /profiles
 /sites
 /themes
+/modules
 /.editorconfig
 /.gitattributes

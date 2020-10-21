@@ -26,10 +26,11 @@ services:
       IMGPROXY_BASE_URL: local:/// # only look at local files, therefore no URL signatures are needed
 
   drupal:
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     build: .
     ports:
       - 80:80
-    restart: unless-stopped
     volumes:
       - ./app/themes:/app/themes
       - ./app/config:/app/config
@@ -60,7 +61,6 @@ services:
     volumes:
       - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
       - ./db:/var/lib/postgresql/data
-    restart: always
 
   elasticsearch:
     image: amsterdam/elasticsearch6
