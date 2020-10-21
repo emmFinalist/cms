@@ -29,8 +29,8 @@ services:
     build: .
     ports:
       - 80:80
+    restart: unless-stopped
     volumes:
-      - ./app/modules:/app/modules
       - ./app/themes:/app/themes
       - ./app/config:/app/config
       - ./app/shared/profiles:/app/shared/profiles
@@ -60,6 +60,7 @@ services:
     volumes:
       - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
       - ./db:/var/lib/postgresql/data
+    restart: always
 
   elasticsearch:
     image: amsterdam/elasticsearch6

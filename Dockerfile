@@ -1,33 +1,41 @@
 FROM drupal:9.0.7-apache
 
-RUN apt update && apt install -y git unzip
+RUN apt update && \
+  apt install -y git unzip && \
+  rm -rf /var/lib/apt/lists
 
 COPY data/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
-WORKDIR /var/www/html/
+RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
+  mv drush.phar /usr/local/bin/drush && \
+  chmod +x /usr/local/bin/drush
 
-RUN curl -sS https://getcomposer.org/installer | php
+WORKDIR /opt/drupal
 
 COPY composer.json composer.lock ./
 
-RUN composer install --ansi --no-interaction --no-cache --no-suggest --no-plugins
+# Composer is available in the Drupal image, we can just run it without the need to install it
+RUN composer install --ansi --no-interaction --no-cache --no-suggest
 
-RUN rm -rf core db
+RUN rm -rf /template/sites
+COPY data/sites /template/sites
+
+RUN rm -rf /app/config
+COPY app/config /app/config
+
+RUN rm -rf /app/themes
+COPY app/themes /app/themes
+
+WORKDIR /opt/drupal/web
 
 RUN \
   for I in profiles sites; do \
-  rm -rf /var/www/html/$I; \
-  ln -s /app/shared/$I /var/www/html/$I; \
+  rm -rf ./$I; \
+  ln -s /app/shared/$I ./$I; \
   done
 
-COPY data/sites /template/sites
-COPY app/config /app/config
-COPY app/themes /app/themes
-
-RUN rm -rf /var/www/html/modules && \
-  mv -r /var/www/html/vendor/drupal /var/www/html/modules
-
-RUN ln -s /app/themes /var/www/html/themes
+RUN rm -rf ./themes && \
+  ln -s /app/themes ./themes
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
@@ -35,4 +43,4 @@ RUN chmod 755 /entrypoint.sh
 COPY data/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod proxy proxy_http cache_disk headers
 
-CMD [ "/entrypoint.sh"]
+CMD ["/entrypoint.sh"]

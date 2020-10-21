@@ -20,18 +20,17 @@ start: ## start single Docker Compose service in detached mode
 stop: ## stop Docker Compose
 	docker-compose down --remove-orphans
 
-restart: ## restart Docker Compose
-	stop start status
+restart: stop start status ## restart Docker Compose
 
 status: ## show Docker Compose process list
 	docker-compose ps
 
-rebuild: stop build start status
+rebuild: stop build start status ## stop running containers, build and start them
 
-shell: ## execute command on container. Usage `make CONTAINER=database shell`
+shell: ## execute command on container. Usage: make CONTAINER=database shell
 	docker-compose exec ${CONTAINER} sh
 
-import_db:
+import_db: ## import postgres database. Usage: make DB_FILE=psql.gz import_db
 ifdef DB_FILE
 	@docker-compose exec -T database pg_restore -C --clean --no-acl --no-owner -U postgres -d cms < ${DB_FILE}
 else
