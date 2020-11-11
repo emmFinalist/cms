@@ -9,12 +9,10 @@
 version: '3.5'
 
 services:
-  imgproxy:
-    ports:
-      - 9091:8080
+  imgproxy: # port 8080
     image: darthsim/imgproxy
     volumes:
-      - ./app/shared/sites:/app/shared/sites
+    - ./app/shared/sites:/app/shared/sites
     restart: always
     environment:
       IMGPROXY_JPEG_PROGRESSIVE: 1
@@ -25,17 +23,16 @@ services:
       IMGPROXY_LOCAL_FILESYSTEM_ROOT: /app/shared/
       IMGPROXY_BASE_URL: local:/// # only look at local files, therefore no URL signatures are needed
 
-  drupal:
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
+  drupal: # port 80
     build: .
     ports:
-      - 80:80
+    - 9091:80
     volumes:
-      - ./app/themes:/app/themes
-      - ./app/config:/app/config
-      - ./app/shared/profiles:/app/shared/profiles
-      - ./app/shared/sites:/app/shared/sites
+    - ./app/modules:/app/modules
+    - ./app/themes:/app/themes
+    - ./app/config:/app/config
+    - ./app/shared/profiles:/app/shared/profiles
+    - ./app/shared/sites:/app/shared/sites
     environment:
       DRUPAL_DBNAME: cms
       DRUPAL_DBHOST: database
@@ -44,29 +41,29 @@ services:
       DRUPAL_PASSWORD: insecure
       DRUPAL_HASH_SALT: salt
     links:
-      - elasticsearch:elastic-index.service.consul
-      - imgproxy:imgproxy
+    - elasticsearch:elastic-index.service.consul
+    - imgproxy:imgproxy
     depends_on:
-      - database
-      - imgproxy
+    - database
+    - imgproxy
 
   database:
     image: amsterdam/postgres11
     ports:
-      - "5434:5432"
+    - "5434:5432"
     environment:
       POSTGRES_DB: cms
       POSTGRES_USER: cms
       POSTGRES_PASSWORD: insecure
     volumes:
-      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
-      - ./db:/var/lib/postgresql/data
+    - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
+    - ./db:/var/lib/postgresql/data
 
   elasticsearch:
     image: amsterdam/elasticsearch6
     command: elasticsearch -Ehttp.host=0.0.0.0 -Etransport.host=127.0.0.1
     ports:
-      - "9200:9200"
-      - "9300:9300"
+    - "9200:9200"
+    - "9300:9300"
     volumes:
-      - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
+    - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
