@@ -11,7 +11,7 @@ version: '3.5'
 services:
   imgproxy:
     ports:
-      - 8081:8080
+      - 9091:8080
     image: darthsim/imgproxy
     volumes:
       - ./app/shared/sites:/app/shared/sites
@@ -30,7 +30,7 @@ services:
     tty: true        # docker run -t
     build: .
     ports:
-    - 9091:80
+    - 80:80
     volumes:
       - ./app/themes:/app/themes
       - ./app/config:/app/config
