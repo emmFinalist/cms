@@ -30,7 +30,7 @@ services:
     tty: true        # docker run -t
     build: .
     ports:
-    - 80:80
+      - 80:80
     volumes:
       - ./app/themes:/app/themes
       - ./app/config:/app/config
